@@ -19,14 +19,43 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     {{-- Jquery --}}
 
+    {{-- fontawesome --}}
+    <script src="https://kit.fontawesome.com/05aea6e721.js" crossorigin="anonymous"></script>
+    {{-- fontawesome --}}
+
+    {{-- ckeditor --}}
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+    {{-- ckeditor --}}
+
     @yield('css')
+    <style>
+        .color1 {
+            background-color: #2C3333;
+        }
+        .color2 {
+            background-color: #395B64;
+        }
+        .color3 {
+            background-color: #A5C9CA;
+        }
+        .color4 {
+            background-color: #E7F6F2;
+        }
+        .warning{
+            background-color: #FCD34D;
+        }
+        .danger{
+            background-color: #FF5151;
+        }
+        .info{
+            background-color: #22D3EE;
+        }
+    </style>
 </head>
 <body>
     <main>
         @yield('content')
     </main>
-
-    @extends('Layout.Footer')
 
     {{-- Flowbite --}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
