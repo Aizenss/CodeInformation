@@ -16,7 +16,6 @@
             </div>
         </div>
 
-
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
             <table class="w-full text-left rtl:text-right">
                 <thead class="text-xs text-white uppercase color2">
@@ -33,31 +32,36 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b">
-                        <th scope="row" class="px-6 py-4 text-black whitespace-nowrap">
-                            1
-                        </th>
-                        <td class="px-6 py-4 font-semibold text-black">
-                            Laravel
-                        </td>
-                        <td class="flex items-center gap-2 px-6 py-4">
-                            <button data-modal-target="edit-modal" data-modal-toggle="edit-modal"
-                                class="block text-black warning font-medium rounded-lg text-sm p-3 text-center shadow-lg"
-                                type="button">
-                                <i class="fa-solid fa-pen-to-square text-[20px]"></i>
-                            </button>
-                            <button data-modal-target="delete-modal" data-modal-toggle="delete-modal"
-                                class="block text-black danger font-medium rounded-lg text-sm p-3 text-center shadow-lg"
-                                type="button">
-                                <i class="fa-solid fa-trash text-[20px]"></i>
-                            </button>
-                        </td>
-                    </tr>
+                    @foreach ($categories as $category)
+                        <tr class="bg-white border-b">
+                            <th scope="row" class="px-6 py-4 text-black whitespace-nowrap">
+                                {{ $loop->iteration }}
+                            </th>
+                            <td class="px-6 py-4 font-semibold text-black">
+                                {{ $category->name }}
+                            </td>
+                            <td class="flex items-center gap-2 px-6 py-4">
+                                <button data-modal-target="edit-modal" data-modal-toggle="edit-modal"
+                                    class="block text-black warning font-medium rounded-lg text-sm p-3 text-center shadow-lg"
+                                    type="button" data-category-id="{{ $category->id }}"
+                                    data-category-name="{{ $category->name }}">
+                                    <i class="fa-solid fa-pen-to-square text-[20px]"></i>
+                                </button>
+                                <button data-modal-target="delete-modal" data-modal-toggle="delete-modal"
+                                    class="block text-black danger font-medium rounded-lg text-sm p-3 text-center shadow-lg"
+                                    type="button" data-category-id="{{ $category->id }}">
+                                    <i class="fa-solid fa-trash text-[20px]"></i>
+                                </button>
+                            </td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
         </div>
 
     </div>
+
+    {{-- modal create --}}
     <div id="add-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -76,10 +80,12 @@
                     </button>
                 </div>
                 <div class="p-4 md:p-5 space-y-4">
-                    <form action="">
+                    <form action="{{ route('category.store') }}" method="post">
+                        @csrf
                         <div class="mb-6">
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Nama Kategori</label>
-                            <input type="email" id="email"
+                            <label for="text" class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                Kategori</label>
+                            <input type="text" id="text" name="name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 required />
                         </div>
@@ -92,6 +98,7 @@
             </div>
         </div>
     </div>
+    {{-- Modal Edit --}}
     <div id="edit-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -110,12 +117,16 @@
                     </button>
                 </div>
                 <div class="p-4 md:p-5 space-y-4">
-                    <form action="">
+                    <form action="{{ route('category.update', ':id') }}" method="post" id="edit-form">
+                        @csrf
+                        @method('PUT')
+                        <input type="hidden" name="id" id="edit-id">
                         <div class="mb-6">
-                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Nama Kategori</label>
-                            <input type="email" id="email"
+                            <label for="edit-name" class="block mb-2 text-sm font-medium text-gray-900">Nama
+                                Kategori</label>
+                            <input type="text" id="edit-name" name="name"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                                value="kategori" required />
+                                required />
                         </div>
                         <div class="flex justify-center">
                             <button type="submit" data-modal-hide="edit-modal"
@@ -126,6 +137,7 @@
             </div>
         </div>
     </div>
+    {{-- Modal Delete --}}
     <div id="delete-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-2xl max-h-full">
@@ -145,12 +157,43 @@
                 </div>
                 <div class="p-4 md:p-5 space-y-4 text-center">
                     <p>Jika anda menghapus data ini, data tidak dapat dikembalikan</p>
-                    <div class="flex justify-center">
-                        <button type="submit" data-modal-hide="delete-modal"
-                            class="text-white danger focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5">hapus</button>
-                    </div>
+                    <form action="{{ route('category.destroy', ':id') }}" method="post" id="delete-form">
+                        @csrf
+                        @method('DELETE')
+                        <input type="hidden" name="id" id="delete-id">
+                        <div class="flex justify-center">
+                            <button type="submit" data-modal-hide="delete-modal"
+                                class="text-white danger focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5">hapus</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('[data-modal-toggle="edit-modal"]').forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector('#edit-modal');
+                const form = document.querySelector('#edit-form');
+                const idInput = document.querySelector('#edit-id');
+                const nameInput = document.querySelector('#edit-name');
+                const categoryId = button.getAttribute('data-category-id');
+                const categoryName = button.getAttribute('data-category-name');
+                form.action = '{{ route('category.update', ':id') }}'.replace(':id', categoryId);
+                idInput.value = categoryId;
+                nameInput.value = categoryName;
+            });
+        });
+
+        document.querySelectorAll('[data-modal-toggle="delete-modal"]').forEach(button => {
+            button.addEventListener('click', () => {
+                const modal = document.querySelector('#delete-modal');
+                const form = document.querySelector('#delete-form');
+                const idInput = document.querySelector('#delete-id');
+                const categoryId = button.getAttribute('data-category-id');
+                form.action = '{{ route('category.destroy', ':id') }}'.replace(':id', categoryId);
+                idInput.value = categoryId;
+            });
+        });
+    </script>
 @endsection

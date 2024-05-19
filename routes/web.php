@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -8,9 +10,6 @@ Route::get('/', function () {
 Route::get('/admin/home', function () {
     return view('Admin.Dashboard');
 });
-Route::get('/admin/category', function () {
-    return view('Admin.Category.index');
-});
-Route::get('/admin/news', function () {
-    return view('Admin.News.index');
-});
+Route::resource('/admin/category', CategoryController::class);
+Route::resource('/admin/news', NewsController::class);
+Route::put('admin/news/toggleFeatured/{id}', [NewsController::class, 'toggleFeatured'])->name('news.toggleFeatured');
