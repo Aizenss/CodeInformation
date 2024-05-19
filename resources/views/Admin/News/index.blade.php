@@ -88,7 +88,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
     <div id="add-modal" tabindex="-1" aria-hidden="true"
         class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
@@ -123,7 +122,8 @@
                                 required />
                         </div>
                         <div class="mb-6">
-                            <label for="editor" class="block mb-2 text-sm font-medium text-gray-900">Deskripsi Berita</label>
+                            <label for="editor" class="block mb-2 text-sm font-medium text-gray-900">Deskripsi
+                                Berita</label>
                             <div id="deskripsi"></div>
                         </div>
                         <div class="flex justify-center">
@@ -162,13 +162,15 @@
                                 id="file_input" type="file">
                         </div>
                         <div class="mb-6">
-                            <label for="titleNews" class="block mb-2 text-sm font-medium text-gray-900">Judul Berita</label>
+                            <label for="titleNews" class="block mb-2 text-sm font-medium text-gray-900">Judul
+                                Berita</label>
                             <input type="titleNews" id="titleNews"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                                 required />
                         </div>
                         <div class="mb-6">
-                            <label for="editDeskripsi" class="block mb-2 text-sm font-medium text-gray-900">Deskripsi Berita</label>
+                            <label for="editDeskripsi" class="block mb-2 text-sm font-medium text-gray-900">Deskripsi
+                                Berita</label>
                             <div id="editDeskripsi"></div>
                         </div>
                         <div class="flex justify-center">
@@ -225,9 +227,14 @@
                     </button>
                 </div>
                 <div class="p-4 md:p-5 space-y-4">
-                    <img src="{{ asset('assets/test.jpg') }}" alt="" class="w-[500px] h-[300px] rounded-lg mx-auto">
+                    <img src="{{ asset('assets/test.jpg') }}" alt=""
+                        class="w-[500px] h-[300px] rounded-lg mx-auto">
                     <h3 class="font-semibold text-bold">Deskripsi : </h3>
-                    <p class="font-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quis culpa quod laboriosam. Delectus quaerat totam excepturi amet illum blanditiis, fugiat eveniet sed vitae nostrum saepe? Obcaecati laudantium itaque rerum vel amet magnam, harum quidem, eum assumenda, accusantium minima. A libero, quaerat optio omnis accusantium eius. Vel mollitia blanditiis dolores?</p>
+                    <p class="font-regular">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis quis culpa
+                        quod laboriosam. Delectus quaerat totam excepturi amet illum blanditiis, fugiat eveniet sed vitae
+                        nostrum saepe? Obcaecati laudantium itaque rerum vel amet magnam, harum quidem, eum assumenda,
+                        accusantium minima. A libero, quaerat optio omnis accusantium eius. Vel mollitia blanditiis dolores?
+                    </p>
                 </div>
             </div>
         </div>
@@ -235,18 +242,17 @@
 @endsection
 
 @section('scripts')
-<script>
-    ClassicEditor
-        .create( document.querySelector( '#deskripsi' ) )
-        .catch( error => {
-            console.error( error );
-        } );
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#deskripsi'))
+            .catch(error => {
+                console.error(error);
+            });
 
         ClassicEditor
-        .create( document.querySelector( '#editDeskripsi' ) )
-        .catch( error => {
-            console.error( error );
-        } );
-</script>
-
+            .create(document.querySelector('#editDeskripsi'))
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
 @endsection
