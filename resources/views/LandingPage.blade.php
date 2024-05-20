@@ -4,6 +4,8 @@
 
     @include('Layout.Navbar')
 
-    @include('Layout.Sidebar')
+    <div class="my-24"></div>
+
+    @include('Layout.Footer')
 
 @endsection
