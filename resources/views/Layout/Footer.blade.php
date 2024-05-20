@@ -9,30 +9,31 @@
                     CodeInformation adalah informasi terkait pengkodean atau panduan pengguna untuk memahami kode program.
                 </p>
             </div>            
-          <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
-            <div>
-                <h2 class="mb-6 text-xl font-bold text-color3">Menu</h2>
-                <ul class="text-color3 font-medium">
-                    <li class="mb-2">
-                        <a href="#" class="hover:underline">Beranda</a>
-                    </li>
-                    <li class="mb-2">
-                        <a href="#" class="hover:underline">Tentang Kami</a>
-                    </li>
-                    <li>
-                        <a href="#" class="hover:underline">Login</a>
-                    </li>
-                </ul>
-            </div>
-            <div>
-                <h2 class="mb-6 text-xl font-bold text-color3">Berita Terbaru</h2>
-                <ul class="text-color3 font-medium">
-                    <li class="mb-2"><a href="#" class="text-black hover:underline">Lorem ipsum</a></li>
-                    <li class="mb-2"><a href="#" class="text-black hover:underline">Lorem ipsum</a></li>
-                    <li class="mb-2"><a href="#" class="text-black hover:underline">Lorem ipsum</a></li>
-                    <li><a href="#" class="text-black hover:underline">Lorem ipsum</a></li>
-                </ul>            
-            </div>
+            <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-color3">Menu</h2>
+                    <ul class="text-color3 font-medium">
+                        <li class="mb-2">
+                            <a href="#" class="text-black no-underline">Beranda</a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="#" class="text-black no-underline">Tentang Kami</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-black no-underline">Login</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 class="mb-6 text-xl font-bold text-color3">Berita Terbaru</h2>
+                    <ul class="text-color3 font-medium">
+                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
+                        <li><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
+                    </ul>            
+                </div>
+            </div>            
             <div class="flex flex-col">
                 <h2 class="mb-6 text-xl font-bold text-color3">Contact</h2>
                 <ul class="flex flex-col">

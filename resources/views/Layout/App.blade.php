@@ -12,7 +12,7 @@
     {{-- Tailwind --}}
 
     {{-- Flowbite --}}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"  rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     {{-- Flowbite --}}
 
     {{-- Jquery --}}
@@ -42,14 +42,35 @@
         .color4 {
             background-color: #E7F6F2;
         }
-        .warning{
+        .warning {
             background-color: #FCD34D;
         }
-        .danger{
+        .danger {
             background-color: #FF5151;
         }
-        .info{
+        .info {
             background-color: #22D3EE;
+        }
+        .textcolor1 {
+            color: #2C3333;
+        }
+        .textcolor2 {
+            color: #395B64;
+        }
+        .textcolor3 {
+            color: #A5C9CA;
+        }
+        .textcolor4 {
+            color: #E7F6F2;
+        }
+        .textwarning {
+            color: #FCD34D;
+        }
+        .textdanger {
+            color: #FF5151;
+        }
+        .textinfo {
+            color: #22D3EE;
         }
     </style>
 </head>
@@ -63,8 +84,8 @@
     {{-- Flowbite --}}
 
     {{-- Jquery --}}
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-    integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+        crossorigin="anonymous"></script>
     {{-- Jquery --}}
 
     @yield('scripts')

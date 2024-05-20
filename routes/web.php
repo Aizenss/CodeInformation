@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('LandingPage');
 });
+
+Route::get('/about-us',function () {
+    return view ('AboutUs');
+});
+
 Route::get('/admin/home', function () {
     return view('Admin.Dashboard');
 });

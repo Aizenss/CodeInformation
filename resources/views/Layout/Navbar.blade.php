@@ -1,6 +1,6 @@
 <nav class="color3 border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-2 py-1">
-        <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse">
+        <a href="#" class="flex items-center space-x-2 rtl:space-x-reverse no-underline">
             <img src="{{ asset('assets/CIcon.png') }}" class="h-6" alt="CI Logo" />
             <span class="self-center text-lg font-semibold text-black whitespace-nowrap">CodeInformation</span>
         </a>
@@ -13,16 +13,15 @@
         <div class="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul class="font-medium flex flex-col p-2 md:p-0 mt-2 rounded-lg color3 md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-transparent">
                 <li>
-                    <a href="#" class="block py-1 px-2 text-black bg-color3 rounded md:bg-transparent md:text-color3 md:p-0" aria-current="page">Beranda</a>
+                    <a href="#" class="block py-1 px-2 text-black bg-color3 rounded md:bg-transparent md:text-color3 md:p-0 no-underline" aria-current="page">Beranda</a>
                 </li>
                 <li>
-                    <a href="#" class="block py-1 px-2 text-black rounded hover:bg-color4 md:hover:bg-transparent md:border-0 md:hover:text-color4 md:p-0">Tentang Kami</a>
+                    <a href="#" class="block py-1 px-2 text-black rounded hover:bg-color4 md:hover:bg-transparent md:border-0 md:hover:text-color4 md:p-0 no-underline">Tentang Kami</a>
                 </li>
                 <li>
-                    <a href="#" class="color2 text-white block py-1 px-2 rounded hover:bg-color4 md:border-0 md:hover:text-color4 md:p-0">Login</a>
+                    <a href="#" class="color2 text-white block py-1 px-2 rounded hover:bg-color4 md:border-0 md:hover:text-color4 md:p-0 no-underline">Login</a>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
-
