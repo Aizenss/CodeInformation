@@ -15,8 +15,8 @@
             <h2 class="font-bold text-xl mb-2">Bagaimana Kami Memulai</h2>
             <p class="text-sm leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sunt unde repellat inventore laudantium sint quas quam quasi recusandae minus enim, qui, nostrum officia obcaecati saepe? Consectetur iure repellat officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
-                <br>
-                <br>
+            </p>
+            <p class="text-sm leading-relaxed">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut sunt unde repellat inventore laudantium sint quas quam quasi recusandae minus enim, qui, nostrum officia obcaecati saepe? Consectetur iure repellat officia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
             </p>
         </div>
@@ -27,7 +27,7 @@
         <hr class="hr-title mt-2 w-1/5 mx-auto border-b-2">
     </div>
 
-    <div class="mt-5 grid grid-cols-1 md:grid-cols-4 gap-4 px-4 md:px-16 mb-20">
+    <div class="mt-5 grid grid-cols-1 md:grid-cols-4 gap-2 px-4 md:px-16 mb-20">
         <div class="text-center">
             <img src="{{ asset('assets/member.png') }}" alt="Member 1" class="w-32 h-32 rounded-full border-[6px] border-[#A5C9CA] mx-auto mb-4">
             <h3 class="font-semibold text-xl">Irsyad Andhika</h3>
@@ -47,7 +47,7 @@
             <img src="{{ asset('assets/member.png') }}" alt="Member 1" class="w-32 h-32 rounded-full border-[6px] border-[#A5C9CA] mx-auto mb-4">
             <h3 class="font-semibold text-xl">Fergidion Sagita</h3>
             <p class="text-regular font-semibold textcolor2">Frontend</p>
-        </div>
+        </div>    
     </div>
 
     @include('Layout.Footer')

@@ -12,6 +12,10 @@ Route::get('/about-us',function () {
     return view ('AboutUs');
 });
 
+Route::get('/detail-news',function () {
+    return view ('DetailNews');
+});
+
 Route::get('/admin/home', function () {
     return view('Admin.Dashboard');
 });
