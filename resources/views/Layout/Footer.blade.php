@@ -13,18 +13,18 @@
                 <div>
                     <ul class="text-color3 font-medium">
                     <h2 class="mb-6 text-xl font-bold text-color3">Menu</h2>
-                        <li class="mb-2"><a href="#" class="text-black no-underline">Beranda</a></li>
-                        <li class="mb-2"><a href="#" class="text-black no-underline">Tentang Kami</a></li>
-                        <li><a href="#" class="text-black no-underline">Login</a></li>
+                        <li class="mb-2"><a href="/" class="text-black no-underline hover:text-blue-500">Beranda</a></li>
+                        <li class="mb-2"><a href="/about-us" class="text-black no-underline hover:text-blue-500">Tentang Kami</a></li>
+                        <li><a href="#" class="text-black no-underline hover:text-blue-500">Login</a></li>
                     </ul>
                 </div>
                 <div>
                     <ul class="text-color3 font-medium">
                     <h2 class="mb-6 text-xl font-bold text-color3">Berita Terbaru</h2>
-                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
-                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
-                        <li class="mb-2"><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
-                        <li><a href="#" class="text-black no-underline">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="/detail-news" class="text-black no-underline hover:text-blue-500">Berikut adalah ..</a></li>
+                        <li class="mb-2"><a href="#" class="text-black no-underline hover:text-blue-500">Lorem ipsum</a></li>
+                        <li class="mb-2"><a href="#" class="text-black no-underline hover:text-blue-500">Lorem ipsum</a></li>
+                        <li><a href="#" class="text-black no-underline hover:text-blue-500">Lorem ipsum</a></li>
                     </ul>            
                 </div>
                 <div class="flex flex-col">

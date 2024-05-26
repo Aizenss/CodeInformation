@@ -74,9 +74,9 @@
         }
     </style>
 </head>
-<body>
+<body class="color4">
     <main>
-        @yield('content')
+            @yield('content')
     </main>
 
     {{-- Flowbite --}}
