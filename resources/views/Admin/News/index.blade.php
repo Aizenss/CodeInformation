@@ -38,7 +38,7 @@
                                     class="w-[100px] rounded-lg">
                             </td>
                             <td class="px-6 py-4 font-semibold text-black">{{ $newsItem->title }}</td>
-                            <td class="px-6 py-4 font-medium text-black max-w-[400px]">{{ $newsItem->description }}</td>
+                            <td class="px-6 py-4 font-medium text-black max-w-[400px] truncate">{{ $newsItem->description }}</td>
                             <td class="px-6 py-4 font-medium text-black">{{ $newsItem->category->name }}</td>
                             <td class="px-6 py-4">
                                 <form action="{{ route('news.toggleFeatured', $newsItem->id) }}" method="post">
@@ -59,7 +59,7 @@
                                     type="button" data-news-id="{{ $newsItem->id }}"
                                     data-news-title="{{ $newsItem->title }}"
                                     data-news-description="{{ $newsItem->description }}"
-                                    data-news-image="{{ asset($newsItem->image_path) }}">
+                                    data-news-image="{{ asset('storage/'.$newsItem->image) }}">
                                     <i class="fa-solid fa-eye text-[20px]"></i>
                                 </button>
                                 <button data-modal-target="edit-modal" data-modal-toggle="edit-modal"
